@@ -43,10 +43,10 @@ header {
 /* Filter Section */
 .filter-section {
   display: flex;
-  justify-content: flex-start; /* Aligns items to the left */
+  justify-content: flex-start;
   align-items: center;
   padding: 10px;
-  background-color: transparent; /* Removes grey background */
+  background-color: transparent;
 }
 
 .filter-section span {
@@ -82,7 +82,7 @@ header {
 .podcast img {
   width: 100%;
   height: 150px;
-  object-fit: cover;
+  object-fit: cover; /* ✅ Fixes image stretching/cutoff */
   border-radius: 8px;
 }
 
@@ -103,27 +103,36 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
+  overflow-y: auto; /* ✅ Allows full scroll on tall modals */
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start; /* ✅ Aligns to top for better space */
+  padding: 40px 20px;
+  z-index: 1000;
 }
 
 .modal-content {
   background-color: #fff;
-  padding: 20px;
+  max-height: 90vh; /* ✅ Limit height for scroll */
+  overflow-y: auto;  /* ✅ Enable inner scrolling */
   border-radius: 8px;
-  width: 80%;
+  width: 100%;
   max-width: 800px;
   position: relative;
+}
+
+.modal-scrollable {
+  padding: 20px;
 }
 
 .close-button {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 20px;
   font-size: 1.5em;
   cursor: pointer;
+  z-index: 10;
 }
 
 .modal-header h2 {

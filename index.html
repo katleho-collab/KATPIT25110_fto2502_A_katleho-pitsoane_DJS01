@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Podcast App</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
   <!-- Header -->
@@ -38,23 +38,25 @@
   <!-- Modal for Podcast Details -->
   <div id="modal" class="modal hidden">
     <div class="modal-content">
-      <span id="close-modal" class="close-button">×</span>
-      <div class="modal-header">
-        <h2 id="modal-title"></h2>
-      </div>
-      <div class="modal-body">
-        <img id="modal-image" src="" alt="" class="modal-image">
-        <div class="modal-details">
-          <p><strong>Description</strong></p>
-          <p id="modal-description"></p>
-          <p><strong>Genres</strong></p>
-          <div id="modal-genres"></div>
-          <p><strong>Last updated:</strong> <span id="modal-updated"></span></p>
+      <div class="modal-scrollable">
+        <span id="close-modal" class="close-button">×</span>
+        <div class="modal-header">
+          <h2 id="modal-title"></h2>
         </div>
-      </div>
-      <div class="modal-seasons">
-        <h3>SEASONS</h3>
-        <div id="modal-seasons-list"></div>
+        <div class="modal-body">
+          <img id="modal-image" src="" alt="" class="modal-image">
+          <div class="modal-details">
+            <p><strong>Description</strong></p>
+            <p id="modal-description"></p>
+            <p><strong>Genres</strong></p>
+            <div id="modal-genres"></div>
+            <p><strong>Last updated:</strong> <span id="modal-updated"></span></p>
+          </div>
+        </div>
+        <div class="modal-seasons">
+          <h3>SEASONS</h3>
+          <div id="modal-seasons-list"></div>
+        </div>
       </div>
     </div>
   </div>
